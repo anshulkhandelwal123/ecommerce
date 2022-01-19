@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commercec | About Us
+    </title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text.css"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" width="150"></a>
+        </div>
+        <div class="nav_side">
+            <a href="about.html">About Us</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html"> Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href=" ">Login/Register</a>
+        </div>
+    </nav>
+
+    <div class="about_us">
+        <h2>About Us</h2>
+        <div class="about_content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero laborum ipsam rerum porro
+                dignissimos accusamus consectetur eveniet modi odio praesentium consequuntur debitis magni accusantium
+                quibusdam facere, harum fuga consequatur doloribus excepturi corporis obcaecati est! Ducimus veritatis
+                laborum eum aliquid quisquam dolores neque quasi, deserunt asperiores ratione illo repellendus nesciunt
+                perspiciatis praesentium sit eligendi nisi culpa porro iure quidem dignissimos magnam? Aperiam
+                consequuntur dolorem labore corrupti tempore voluptatum ab minus ipsa, debitis excepturi iusto? Placeat
+                vel suscipit et delectus architecto eaque numquam minima, optio perferendis, beatae fugit fugiat unde
+                quos.</p>
+        </div>
+        <hr>
+        <h2>Our Mission</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quas neque, facere atque dolor qui aperiam?
+            Corrupti harum placeat repellat sunt omnis rem voluptate dignissimos, corporis nulla odit similique sequi,
+            distinctio a mollitia accusantium. Earum.</p>
+    </div>
+    <div class="feed">
+        <h2>Write a review</h2>
+        <div class="feed_form">
+            <form name="submit-googlesheet" method="post">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email ID"><br>
+                <input type="number" name="Number" placeholder="Contact Number"><br>
+                <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="logo.png" width="150"></a>
+        </div>
+        <div class="pages">
+            <h3>Pagees</h3>
+            <a href="about.html">About Us</a>|
+            <a href="service.html">Services</a>|
+            <a href="">Blogs</a>|
+            <a href="">Login</a>|
+            <a href="">Sign Up</a>|
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>|
+            <a href="">Terms of Use</a>|
+            <a href="">Refund Policy</a>|
+        </div>
+        <div class="social">
+            <h3>Follow us</h3>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=en-in" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://in.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact us</h3>
+            <a href="//api.WhatsApp.com/send?phone:+917845363748" target="_blank><i class=" fab fa-whatsapp"></i></a>
+            <a href="tel:+9187418467"><i class="fas fa-phone-alt"></i></a>
+            <a href="mailto:support@1stop.ai"><i class="far fa-envelope"></i></a>
+        </div>
+        <hr>
+        <p>Copyright &copy; 2021 1stop. All rights reserved</p>
+
+    </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbznXwGiRrELwzDEYerVfvb8SKO6cjKlIn4QuGmO1IFR1Juz63q9dg4X_whYdmTHUZCN/exec'
+        const form = document.forms['submit-googlesheet']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
